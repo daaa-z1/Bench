@@ -13,19 +13,19 @@ ApplicationWindow {
 
     StackView {
         id: stackView
-        initialItem: Dashboard {}
+        initialItem: Qt.resolvedUrl("pages/Dashboard.qml")
         anchors.fill: parent
     }
 
     Button {
         id: dashboardButton
         text: "Dashboard"
-        onClicked: stackView.replace(Dashboard {})
+        onClicked: stackView.replace(Qt.resolvedUrl("pages/Dashboard.qml"))
     }
 
     Button {
         id: graphButton
         text: "Graph"
-        onClicked: stackView.replace(Graph {})
+        onClicked: stackView.replace(Qt.resolvedUrl("pages/Graph.qml"))
     }
 }
