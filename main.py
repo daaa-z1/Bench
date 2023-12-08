@@ -3,6 +3,8 @@ import u6
 from PyQt5.QtWidgets import QApplication
 from PyQt5.QtCore import QObject, QTimer, pyqtProperty, pyqtSlot, pyqtSignal
 from PyQt5.QtQml import QQmlApplicationEngine
+from PyQt5.QtQuickControls2 import QQuickStyle
+from PyQt5.QtGui import QPalette, QColor
 
 class MainApp(QObject):
     def __init__(self, parent=None):
@@ -44,7 +46,11 @@ class MainApp(QObject):
         self.value = {key: calculated_values[i] for i, key in enumerate(self.keys)}
 
 if __name__ == "__main__":
+    QQuickStyle.setStyle("Material")
     app = QApplication(sys.argv)
+    palette = app.palette()
+    palette.setColor(QPalette.Window, QColor("#303030"))
+    app.setPalette(palette)
     engine = QQmlApplicationEngine()
     mainApp = MainApp()
     ctx = engine.rootContext()
