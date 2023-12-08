@@ -1,6 +1,6 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
-import QtQuick.Controls.Material 2.15
+import QtQuick.Controls.Styles 1.4
 
 ApplicationWindow {
     id: window
@@ -9,8 +9,11 @@ ApplicationWindow {
     height: 480
     title: "Servo Valve Tester"
 
-    Material.theme: Material.Dark
-    Material.accent: Material.Blue
+    style: ApplicationWindowStyle {
+        background: Rectangle {
+            color: "#aeaeae"
+        }
+    }
 
     StackView {
         id: stackView
@@ -21,10 +24,11 @@ ApplicationWindow {
     footer: Rectangle {
         width: parent.width
         height: 50
-        color: Material.accent
+        color: "transparent"
 
         Row {
             anchors.centerIn: parent
+            spacing: 10
 
             Button {
                 id: dashboardButton
