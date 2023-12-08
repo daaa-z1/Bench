@@ -35,4 +35,9 @@ Item {
             // Konfigurasi lainnya...
         }
     }
+    
+    Connections {
+        target: mainApp
+    }
+    
 }
