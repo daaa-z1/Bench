@@ -12,7 +12,7 @@ ApplicationWindow {
     Rectangle {
         id: container
         anchors.fill: parent
-        color: "#0a0a0a"
+        color: "#eaeaea30"
         StackView {
             id: stackView
             initialItem: Qt.resolvedUrl("pages/Dashboard.qml")
@@ -23,7 +23,7 @@ ApplicationWindow {
     footer: Rectangle {
         width: parent.width
         height: 50
-        color: "transparent"
+        color: "#eaeaea30"
 
         Row {
             anchors.centerIn: parent
