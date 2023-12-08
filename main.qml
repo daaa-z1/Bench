@@ -12,7 +12,7 @@ ApplicationWindow {
     Rectangle {
         id: container
         anchors.fill: parent
-        color: "#aa22"
+        color: "#0a0a0a"
         StackView {
             id: stackView
             initialItem: Qt.resolvedUrl("pages/Dashboard.qml")
