@@ -9,11 +9,7 @@ ApplicationWindow {
     height: 480
     title: "Servo Valve Tester"
 
-    ApplicationWindowStyle {
-        background: Rectangle {
-            color: "#aeaeae"
-        }
-    }
+    color: "#aa22"
 
     StackView {
         id: stackView
