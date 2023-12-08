@@ -9,7 +9,7 @@ ApplicationWindow {
     height: 480
     title: "Servo Valve Tester"
 
-    style: ApplicationWindowStyle {
+    ApplicationWindowStyle {
         background: Rectangle {
             color: "#aeaeae"
         }
