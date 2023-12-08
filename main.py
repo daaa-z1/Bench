@@ -46,11 +46,7 @@ class MainApp(QObject):
         self.value = {key: calculated_values[i] for i, key in enumerate(self.keys)}
 
 if __name__ == "__main__":
-    QQuickStyle.setStyle("Material")
     app = QApplication(sys.argv)
-    palette = app.palette()
-    palette.setColor(QPalette.Window, QColor("#303030"))
-    app.setPalette(palette)
     engine = QQmlApplicationEngine()
     mainApp = MainApp()
     ctx = engine.rootContext()
