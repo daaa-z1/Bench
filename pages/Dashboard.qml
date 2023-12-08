@@ -19,8 +19,8 @@ Item {
             id: gauge1
             Layout.fillWidth: true
             Layout.fillHeight: true
-            minimumValue: mainApp.parameter["reff_v"]["minValue"]
-            maximumValue: mainApp.parameter["reff_v"]["maxValue"]
+            minimumValue: -10
+            maximumValue: 10
             value: mainApp.value["reff_v"]
             // Konfigurasi lainnya...
         }
