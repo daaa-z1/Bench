@@ -29,9 +29,9 @@ Item {
             id: gauge2
             Layout.fillWidth: true
             Layout.fillHeight: true
-            minimumValue: mainApp.parameter["aktual"]["minValue"]
-            maximumValue: mainApp.parameter["aktual"]["maxValue"]
-            value: mainApp.value["aktual"]
+            minimumValue: mainApp.parameter['aktual']['minValue']
+            maximumValue: mainApp.parameter['aktual']['maxValue']
+            value: mainApp.value['aktual']
             // Konfigurasi lainnya...
         }
     }
