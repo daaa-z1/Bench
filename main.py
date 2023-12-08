@@ -48,6 +48,7 @@ if __name__ == "__main__":
     engine = QQmlApplicationEngine()
     mainApp = MainApp()
     ctx = engine.rootContext()
+    print(mainApp._parameter)
     ctx.setContextProperty("mainApp", mainApp)
     engine.load('main.qml')
     if not engine.rootObjects():
