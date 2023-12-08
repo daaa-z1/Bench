@@ -9,12 +9,15 @@ ApplicationWindow {
     height: 480
     title: "Servo Valve Tester"
 
-    color: "#aa22"
-
-    StackView {
-        id: stackView
-        initialItem: Qt.resolvedUrl("pages/Dashboard.qml")
+    Rectangle {
+        id: container
         anchors.fill: parent
+        color: "#aa22"
+        StackView {
+            id: stackView
+            initialItem: Qt.resolvedUrl("pages/Dashboard.qml")
+            anchors.fill: container
+        }
     }
 
     footer: Rectangle {
