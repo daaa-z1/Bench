@@ -20,7 +20,7 @@ Item {
             Layout.fillWidth: true
             Layout.fillHeight: true
             minimumValue: mainApp.parameter["reff_v"]["minValue"]
-            maximumValue: maifnApp.parameter["reff_v"]["maxValue"]
+            maximumValue: mainApp.parameter["reff_v"]["maxValue"]
             value: mainApp.value["reff_v"]
             // Konfigurasi lainnya...
         }
