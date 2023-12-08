@@ -9,8 +9,8 @@ class MainApp(QObject):
         super().__init__(parent)
         self.d = u6.U6()
         self.daftar_ain = [(0, 1)]
-        self.daftar_min = [(0, 0)]
-        self.daftar_max = [(315, 315)]
+        self.daftar_min = [(-10, -10)]
+        self.daftar_max = [(10, 10)]
         self.daftar_min_scale = [(-10, -10)]
         self.daftar_max_scale = [(10, 10)]
         self.keys = ['reff_v', 'aktual']
