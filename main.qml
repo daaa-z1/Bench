@@ -17,15 +17,21 @@ ApplicationWindow {
         anchors.fill: parent
     }
 
-    Button {
-        id: dashboardButton
-        text: "Dashboard"
-        onClicked: stackView.replace(Qt.resolvedUrl("pages/Dashboard.qml"))
-    }
+    Row{
+        anchors.bottom: parent.bottom
+        anchors.horizontalCenter: parent.horizontalCenter
+        
+        spacing: 10
+        Button {
+            id: dashboardButton
+            text: "Dashboard"
+            onClicked: stackView.replace(Qt.resolvedUrl("pages/Dashboard.qml"))
+        }
 
-    Button {
-        id: graphButton
-        text: "Graph"
-        onClicked: stackView.replace(Qt.resolvedUrl("pages/Graph.qml"))
+        Button {
+            id: graphButton
+            text: "Graph"
+            onClicked: stackView.replace(Qt.resolvedUrl("pages/Graph.qml"))
+        }
     }
 }
