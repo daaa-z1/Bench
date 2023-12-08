@@ -3,8 +3,6 @@ import u6
 from PyQt5.QtWidgets import QApplication
 from PyQt5.QtCore import QObject, QTimer, pyqtProperty, pyqtSlot, pyqtSignal
 from PyQt5.QtQml import QQmlApplicationEngine
-from PyQt5.QtQuickControls2 import QQuickStyle
-from PyQt5.QtGui import QPalette, QColor
 
 class MainApp(QObject):
     def __init__(self, parent=None):
