@@ -16,4 +16,16 @@ ApplicationWindow {
         initialItem: Dashboard {}
         anchors.fill: parent
     }
+
+    Button {
+        id: dashboardButton
+        text: "Dashboard"
+        onClicked: stackView.replace(Dashboard {})
+    }
+
+    Button {
+        id: graphButton
+        text: "Graph"
+        onClicked: stackView.replace(Graph {})
+    }
 }
