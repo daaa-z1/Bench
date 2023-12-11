@@ -22,8 +22,8 @@ import QtCharts 2.15
 
         ValueAxis {
             id: axisY
-            min: -10
-            max: 10
+            min: -15
+            max: 15
         }
 
         LineSeries {
@@ -43,7 +43,6 @@ import QtCharts 2.15
         function updatePlot() {
             reff_vSeries.append(reff_vSeries.count, mainApp.value['reff_v'])
             aktualSeries.append(reff_vSeries.count, mainApp.value['aktual'])
-            
             console.log(mainApp.value['reff_v'], mainApp.value['aktual'])
 
             if (reff_vSeries.count > axisX.max - axisX.min) {
