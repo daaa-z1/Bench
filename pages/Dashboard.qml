@@ -24,7 +24,7 @@ Item {
             maximumValue: 10
             value: mainApp.value["reff_v"]
             style: CircularGaugeStyle{
-            tickmarkStepSize: 1
+            tickmarkStepSize: 10
             }
             
             Text {
@@ -45,7 +45,7 @@ Item {
             maximumValue: 10
             value: mainApp.value['aktual']
             style: CircularGaugeStyle{
-            tickmarkStepSize: 1
+            tickmarkStepSize: 10
             }
             
             Text {
