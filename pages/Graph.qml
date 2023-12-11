@@ -27,17 +27,19 @@ import QtCharts 2.15
         }
 
         LineSeries {
-            id: reff_vSeries
+            id: lineSeries1
             name: "Command V"
             axisX: axisX
             axisY: axisY
+            useOpenGL: true
         }
 
         LineSeries {
-            id: aktualSeries
+            id: lineSeries2
             name: "Actual Pos"
             axisX: axisX
             axisY: axisY
+            useOpenGL: true
         }
         
         Component.onCompleted:{
@@ -45,11 +47,11 @@ import QtCharts 2.15
         }
         
         function updatePlot() {
-            reff_vSeries.append(reff_vSeries.count, mainApp.value['reff_v']);
-            aktualSeries.append(reff_vSeries.count, mainApp.value['aktual']);
+            lineSeries1.append(lineSeries1.count, mainApp.value['reff_v']);
+            lineSeries2.append(lineSeries2.count, mainApp.value['aktual']);
             console.log(mainApp.value['reff_v'], mainApp.value['aktual']);
 
-            if (reff_vSeries.count > axisX.max - axisX.min) {
+            if (lineSeries1.count > axisX.max - axisX.min) {
                 axisX.min++;
                 axisX.max++;
             }

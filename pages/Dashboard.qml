@@ -33,6 +33,7 @@ Item {
                     horizontalCenter: parent.horizontalCenter
                 }
                 text: gauge1.value + "V"
+                color: "white"
             }
         }
 
@@ -53,6 +54,7 @@ Item {
                     horizontalCenter: parent.horizontalCenter
                 }
                 text: gauge2.value + "V"
+                color: "white"
             }
         }
     }
