@@ -1,50 +1,53 @@
 import QtQuick 2.15
 import QtCharts 2.15
 
-ChartView {
-    id: chartView
-    anchors.fill: parent
-    theme: ChartView.ChartThemeDark
-    antialiasing: true
-
-    ValueAxis {
-        id: axisX
-        min: 0
-        max: 10
+  Item {
+    Timer {
+        interval: 100
+        running: true
+        repeat: true
+        onTriggered: updatePlot()
     }
+    ChartView {
+        id: chartView
+        anchors.fill: parent
+        theme: ChartView.ChartThemeDark
+        antialiasing: true
 
-    ValueAxis {
-        id: axisY
-        min: 0
-        max: 100
-    }
+        ValueAxis {
+            id: axisX
+            min: 0
+            max: 10
+        }
 
-    LineSeries {
-        id: reff_vSeries
-        name: "Command V"
-        axisX: axisX
-        axisY: axisY
-    }
+        ValueAxis {
+            id: axisY
+            min: 0
+            max: 100
+        }
 
-    LineSeries {
-        id: aktualSeries
-        name: "Actual Pos"
-        axisX: axisX
-        axisY: axisY
-    }
+        LineSeries {
+            id: reff_vSeries
+            name: "Command V"
+            axisX: axisX
+            axisY: axisY
+        }
 
-    Component.onCompleted: {
-        mainApp.valuChanged.conncect(updatePlot)
-    }
+        LineSeries {
+            id: aktualSeries
+            name: "Actual Pos"
+            axisX: axisX
+            axisY: axisY
+        }
+        
+        function updatePlot() {
+            reff_vSeries.append(reff_vSeries.count, mainApp.value['reff_v'])
+            reff_vSeries.append(reff_vSeries.count, mainApp.value['aktual'])
 
-    
-    function updatePlot() {
-        reff_vSeries.append(reff_vSeries.count, mainApp.value['reff_v'])
-        reff_vSeries.append(reff_vSeries.count, mainApp.value['aktual'])
-
-        if (reff_vSeries.count > axisX.max - axisX.min) {
-            axisX.min++;
-            axisX.max++;
+            if (reff_vSeries.count > axisX.max - axisX.min) {
+                axisX.min++;
+                axisX.max++;
+            }
         }
     }
 }

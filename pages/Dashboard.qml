@@ -22,7 +22,9 @@ Item {
             minimumValue: -10
             maximumValue: 10
             value: mainApp.value["reff_v"]
+            style: CircularGaugeStyle{
             tickmarkStepSize: 1
+            }
             
             Label {
                 achors{
@@ -40,7 +42,9 @@ Item {
             minimumValue: -10
             maximumValue: 10
             value: mainApp.value['aktual']
+            style: CircularGaugeStyle{
             tickmarkStepSize: 1
+            }
             
             Label {
                 achors{
