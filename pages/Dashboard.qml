@@ -27,12 +27,12 @@ Item {
             tickmarkStepSize: 1
             }
             
-            Label {
+            Text {
                 anchors{
-                    bottom: parent.bottom
+                    bottom: gauge1.bottom
                     horizontalCenter: parent.horizontalCenter
                 }
-                text: gauge2.value + "V"
+                text: gauge1.value + "V"
             }
         }
 
@@ -47,9 +47,9 @@ Item {
             tickmarkStepSize: 1
             }
             
-            Label {
+            Text {
                 anchors{
-                    bottom: parent.bottom
+                    bottom: gauge2.bottom
                     horizontalCenter: parent.horizontalCenter
                 }
                 text: gauge2.value + "V"
