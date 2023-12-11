@@ -28,7 +28,7 @@ Item {
             }
             
             Label {
-                achors{
+                anchors{
                     bottom: parent.bottom
                     horizontalCenter: parent.horizontalCenter
                 }
@@ -48,7 +48,7 @@ Item {
             }
             
             Label {
-                achors{
+                anchors{
                     bottom: parent.bottom
                     horizontalCenter: parent.horizontalCenter
                 }
