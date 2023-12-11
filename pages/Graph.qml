@@ -2,12 +2,12 @@ import QtQuick 2.15
 import QtCharts 2.15
 
   Item {
-    Timer {
+    /* Timer {
         interval: 100
         running: true
         repeat: true
         onTriggered: chartView.updatePlot()
-    }
+    } */
     ChartView {
         id: chartView
         anchors.fill: parent
@@ -38,6 +38,10 @@ import QtCharts 2.15
             name: "Actual Pos"
             axisX: axisX
             axisY: axisY
+        }
+        
+        Component.onComplete{
+            mainApp.valueChanged.connect(updatePlot);
         }
         
         function updatePlot() {
