@@ -6,7 +6,7 @@ import QtCharts 2.15
         interval: 100
         running: true
         repeat: true
-        onTriggered: updatePlot()
+        onTriggered: chartView.updatePlot()
     }
     ChartView {
         id: chartView
@@ -22,8 +22,8 @@ import QtCharts 2.15
 
         ValueAxis {
             id: axisY
-            min: 0
-            max: 100
+            min: -10
+            max: 10
         }
 
         LineSeries {
