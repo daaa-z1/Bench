@@ -22,17 +22,33 @@ Item {
             minimumValue: -10
             maximumValue: 10
             value: mainApp.value["reff_v"]
-            // Konfigurasi lainnya...
+            tickmarkStepSize: 1
+            
+            Label {
+                achors{
+                    bottom: parent.bottom
+                    horizontalCenter: parent.horizontalCenter
+                }
+                text: gauge2.value + "V"
+            }
         }
 
         CircularGauge {
             id: gauge2
             Layout.fillWidth: true
             Layout.fillHeight: true
-            minimumValue: mainApp.parameter['aktual']['minValue']
-            maximumValue: mainApp.parameter['aktual']['maxValue']
+            minimumValue: -10
+            maximumValue: 10
             value: mainApp.value['aktual']
-            // Konfigurasi lainnya...
+            tickmarkStepSize: 1
+            
+            Label {
+                achors{
+                    bottom: parent.bottom
+                    horizontalCenter: parent.horizontalCenter
+                }
+                text: gauge2.value + "V"
+            }
         }
     }
     

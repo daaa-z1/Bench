@@ -7,17 +7,44 @@ ChartView {
     theme: ChartView.ChartThemeDark
     antialiasing: true
 
+    ValueAxis {
+        id: axisX
+        min: 0
+        max: 10
+    }
+
+    ValueAxis {
+        id: axisY
+        min: 0
+        max: 100
+    }
+
     LineSeries {
         id: reff_vSeries
-        name: "reff_v"
-        XYPoint { x: 0; y: mainApp.value["reff_v"] }
-        // Konfigurasi lainnya...
+        name: "Command V"
+        axisX: axisX
+        axisY: axisY
     }
 
     LineSeries {
         id: aktualSeries
-        name: "aktual"
-        XYPoint { x: 0; y: mainApp.value["aktual"] }
-        // Konfigurasi lainnya...
+        name: "Actual Pos"
+        axisX: axisX
+        axisY: axisY
+    }
+
+    Component.onCompleted: {
+        mainApp.valuChanged.conncect(updatePlot)
+    }
+
+    
+    function updatePlot() {
+        reff_vSeries.append(reff_vSeries.count, mainApp.value['reff_v'])
+        reff_vSeries.append(reff_vSeries.count, mainApp.value['aktual'])
+
+        if (reff_vSeries.count > axisX.max - axisX.min) {
+            axisX.min++;
+            axisX.max++;
+        }
     }
 }
