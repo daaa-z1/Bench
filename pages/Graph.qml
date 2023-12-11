@@ -40,7 +40,7 @@ import QtCharts 2.15
             axisY: axisY
         }
         
-        Component.onComplete{
+        Component.onCompleted:{
             mainApp.valueChanged.connect(updatePlot);
         }
         
