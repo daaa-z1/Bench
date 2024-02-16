@@ -8,7 +8,7 @@ class MainApp(QObject):
     def __init__(self, parent=None):
         super().__init__(parent)
         self.d = u6.U6()
-        self.daftar_ain = [(0, 1)]
+        self.daftar_ain = [(6, 7)]
         self.daftar_min = [(-10, -10)]
         self.daftar_max = [(10, 10)]
         self.daftar_min_scale = [(-10, -10)]

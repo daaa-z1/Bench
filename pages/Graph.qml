@@ -2,12 +2,6 @@ import QtQuick 2.15
 import QtCharts 2.15
 
   Item {
-    /* Timer {
-        interval: 100
-        running: true
-        repeat: true
-        onTriggered: chartView.updatePlot()
-    } */
     ChartView {
         id: chartView
         anchors.fill: parent
