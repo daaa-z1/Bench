@@ -20,6 +20,7 @@ Item {
             id: gauge1
             Layout.fillWidth: true
             Layout.fillHeight: true
+            anchors.margins: 10
             minimumValue: -10
             maximumValue: 10
             value: mainApp.value["reff_v"]
@@ -32,7 +33,16 @@ Item {
                     bottom: gauge1.bottom
                     horizontalCenter: parent.horizontalCenter
                 }
-                text: gauge1.value + "V"
+                text: gauge1.value + " V"
+                color: "white"
+            }
+        }
+            Text {
+                anchors{
+                    bottom: gauge1.bottom
+                    horizontalCenter: parent.horizontalCenter
+                }
+                text: "Current V"
                 color: "white"
             }
         }
@@ -41,6 +51,7 @@ Item {
             id: gauge2
             Layout.fillWidth: true
             Layout.fillHeight: true
+            anchors.margins: 10
             minimumValue: -10
             maximumValue: 10
             value: mainApp.value['aktual']
@@ -53,7 +64,15 @@ Item {
                     bottom: gauge2.bottom
                     horizontalCenter: parent.horizontalCenter
                 }
-                text: gauge2.value + "V"
+                text: gauge2.value + " V"
+                color: "white"
+            }
+            Text {
+                anchors{
+                    bottom: gauge2.top
+                    horizontalCenter: parent.horizontalCenter
+                }
+                text: "Actual Valve"
                 color: "white"
             }
         }
