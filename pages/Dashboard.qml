@@ -25,7 +25,7 @@ Item {
             maximumValue: 10
             value: mainApp.value["reff_v"]
             style: CircularGaugeStyle{
-            tickmarkStepSize: 10
+            tickmarkStepSize: 1
             }
             
             Text {
@@ -36,10 +36,10 @@ Item {
                 text: gauge1.value + " V"
                 color: "white"
             }
-            
+
             Text {
                 anchors{
-                    bottom: gauge1.bottom
+                    bottom: gauge1.top
                     horizontalCenter: parent.horizontalCenter
                 }
                 text: "Current V"
@@ -56,7 +56,7 @@ Item {
             maximumValue: 10
             value: mainApp.value['aktual']
             style: CircularGaugeStyle{
-            tickmarkStepSize: 10
+            tickmarkStepSize: 1
             }
             
             Text {
