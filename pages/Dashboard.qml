@@ -29,6 +29,7 @@ Item {
             }
             
             Text {
+                id: currVal
                 anchors{
                     bottom: gauge1.bottom
                     horizontalCenter: parent.horizontalCenter
@@ -39,7 +40,7 @@ Item {
 
             Text {
                 anchors{
-                    bottom: gauge1.top
+                    bottom: currVal.top
                     horizontalCenter: parent.horizontalCenter
                 }
                 text: "Current V"
@@ -60,6 +61,7 @@ Item {
             }
             
             Text {
+                id: actualVal
                 anchors{
                     bottom: gauge2.bottom
                     horizontalCenter: parent.horizontalCenter
@@ -69,7 +71,7 @@ Item {
             }
             Text {
                 anchors{
-                    bottom: gauge2.top
+                    bottom: actualVal.top
                     horizontalCenter: parent.horizontalCenter
                 }
                 text: "Actual Valve"
