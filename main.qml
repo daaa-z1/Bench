@@ -15,8 +15,8 @@ ApplicationWindow {
         color: "#4a4a4a"
         StackView {
             id: stackView
-            initialItem: Qt.resolvedUrl("pages/Dashboard.qml")
             anchors.fill: container
+            initialItem: "pages/Dashboard.qml"
         }
     }
 
