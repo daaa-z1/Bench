@@ -7,8 +7,6 @@ import QtQuick.Layouts 1.15
 Item {
     id: dashboard
     anchors.fill: parent
-    Material.theme: Material.Dark
-    Material.accent: Material.Blue
 
     GridLayout {
         id: layout

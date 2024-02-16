@@ -16,7 +16,7 @@ ApplicationWindow {
         StackView {
             id: stackView
             anchors.fill: container
-            initialItem: "pages/Dashboard.qml"
+            initialItem: Qt.resolvedUrl("pages/Dashboard.qml")
         }
     }
 
