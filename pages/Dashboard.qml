@@ -36,7 +36,7 @@ Item {
                 text: gauge1.value + " V"
                 color: "white"
             }
-        }
+            
             Text {
                 anchors{
                     bottom: gauge1.bottom
